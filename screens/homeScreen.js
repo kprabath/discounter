@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, StyleSheet, FlatList , SafeAreaView} from 'react-native';
+import { Platform, Text, View, TouchableOpacity, StyleSheet, FlatList , SafeAreaView} from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -131,7 +131,8 @@ export default class HomeScreen extends React.Component {
   }
   render() {
     return (
-      <SafeAreaView style={{flex: 1, flexDirection: 'column', padding: 20 ,backgroundColor:'lightgrey'}}>
+      <SafeAreaView style={{flex: 1}}>
+       <View style = {{  flex:1, flexDirection: 'column', padding:20 ,backgroundColor:'lightgrey'}}>
         <Text style={{marginBottom: 10, fontSize: 20}}>Discount List</Text>
         <FlatList
           keyExtractor={(item) => item.id}
@@ -177,6 +178,7 @@ export default class HomeScreen extends React.Component {
           }}>
           <Icon name="add" size={20} color={'white'} />
         </TouchableOpacity>
+        </View> 
       </SafeAreaView>
     );
   }
