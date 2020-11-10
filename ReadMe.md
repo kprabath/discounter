@@ -21,4 +21,6 @@ To Run in  an IOS device
 
 4)Execute pod install for Cocopod dependecies installations
 
+6)When you are using pos install command make sure to remove generated resource files from the Build Phases by Going to the discounter(Project Name) target ->buildphases->copy bundle resources if not new react native auto link  will produce multiple resource files it will failed the project compilation
+
 5)open the workspace xcode file and run the project from the Xcode
